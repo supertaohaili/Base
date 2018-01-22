@@ -1,0 +1,186 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg_activity"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_user_banner">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="激活状态（未激活），去激活"
+                android:textColor="#ffffff"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_right_white"/>
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_video"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/bg_item_sel"
+                android:drawableLeft="@drawable/ic_user_share"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/ic_right_gray"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:text="视频记录"
+                android:textColor="@color/textGrayColor"
+                android:textSize="16sp"/>
+
+            <include layout="@layout/include_horizontal_line2"/>
+
+            <TextView
+                android:id="@+id/tv_book"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_sel"
+                android:drawableLeft="@drawable/ic_user_share"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/ic_right_gray"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:text="本地书架"
+                android:textColor="@color/textGrayColor"
+                android:textSize="16sp"/>
+
+            <include layout="@layout/include_horizontal_line2"/>
+
+            <TextView
+                android:id="@+id/tv_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_sel"
+                android:drawableLeft="@drawable/ic_user_share"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/ic_right_gray"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:text="收藏图片"
+                android:textColor="@color/textGrayColor"
+                android:textSize="16sp"/>
+
+            <include layout="@layout/include_horizontal_line2"/>
+
+            <TextView
+                android:id="@+id/tv_clear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_sel"
+                android:drawableLeft="@drawable/ic_user_about"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/ic_right_gray"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:text="清空缓存"
+                android:textColor="@color/textGrayColor"
+                android:textSize="16sp"/>
+
+            <include layout="@layout/include_horizontal_line2"/>
+
+            <TextView
+                android:id="@+id/tv_updata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_sel"
+                android:drawableLeft="@drawable/ic_user_logout"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/ic_right_gray"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:text="检查更新"
+                android:textColor="@color/textGrayColor"
+                android:textSize="16sp"/>
+
+            <include layout="@layout/include_horizontal_line2"/>
+
+            <LinearLayout
+                android:id="@+id/llt_safe_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_sel"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_user_setting"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:padding="12dp"
+                    android:text="手势密码"
+                    android:textColor="@color/textGrayColor"
+                    android:textSize="16sp"/>
+
+                <ImageView
+                    android:id="@+id/iv_isopen"
+                    android:layout_width="35dp"
+                    android:layout_height="23dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@drawable/sz_switch_on"/>
+
+            </LinearLayout>
+
+            <include layout="@layout/include_horizontal_line2"/>
+
+            <LinearLayout
+                android:id="@+id/llt_change_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_sel"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_user_setting"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/ic_right_gray"
+                    android:gravity="center_vertical"
+                    android:padding="12dp"
+                    android:text="修改手势密码"
+                    android:textColor="@color/textGrayColor"
+                    android:textSize="16sp"/>
+
+                <include layout="@layout/include_horizontal_line2"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

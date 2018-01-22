@@ -1,0 +1,32 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        resConfigs "zh"
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs', '../lib_base/libs' //就是你放aar的目录地址
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile rootProject.ext.dependencies["recyclerview-v7"]
+    compile rootProject.ext.dependencies["crashreport_upgrade"]
+    compile rootProject.ext.dependencies["umeng_analytics"]
+//    compile(name: "refresh-release", ext: "aar")
+    compile 'com.lcodecorex:tkrefreshlayout:1.0.7'
+    compile 'com.github.supertaohaili:Utils:1.0.0'
+
+
+}

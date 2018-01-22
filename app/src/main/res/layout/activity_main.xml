@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/match_match"
+    android:background="@color/bg_activity"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/center_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <include layout="@layout/include_horizontal_line_main"/>
+
+    <RadioGroup
+        android:id="@+id/rdg_main"
+        style="@style/radiogroup_style"
+        android:background="#ffffff">
+
+        <RadioButton
+            android:id="@+id/rdb_video"
+            style="@style/radiobutton_style"
+            android:checked="true"
+            android:drawableTop="@drawable/sel_home"
+            android:text="视频" />
+
+        <RadioButton
+            android:id="@+id/rdb_book"
+            style="@style/radiobutton_style"
+            android:checked="false"
+            android:drawableTop="@drawable/sel_tab"
+            android:text="电子书" />
+
+        <RadioButton
+            android:id="@+id/rdb_image"
+            style="@style/radiobutton_style"
+            android:checked="false"
+            android:drawableTop="@drawable/sel_tab2"
+            android:text="图片" />
+
+
+        <RadioButton
+            android:id="@+id/rdb_setting"
+            style="@style/radiobutton_style"
+            android:drawableTop="@drawable/sel_user"
+            android:text="设置" />
+    </RadioGroup>
+
+
+</LinearLayout>

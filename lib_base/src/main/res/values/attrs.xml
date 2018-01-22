@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TabRadioButton">
+        <attr name="tabSize" format="dimension" />
+        <attr name="tabTopDrawable" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="StateLayout">
+        <attr name="loadingLayout" format="reference" />
+        <attr name="errorLayout" format="reference" />
+        <attr name="netErrorLayout" format="reference" />
+        <attr name="emptyLayout" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="AutoTabLayout">
+        <attr name="auto_textSize_base_width" format="boolean"></attr>
+    </declare-styleable>
+
+</resources>
