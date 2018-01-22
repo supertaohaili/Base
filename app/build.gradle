@@ -118,7 +118,7 @@ dependencies {
     compile rootProject.ext.dependencies["glide"]
     compile rootProject.ext.dependencies["design"]
     compile rootProject.ext.dependencies["cardview-v7"]
-//    compile project(path: ':lib_base')
-    compile 'com.github.supertaohaili:lib_base:1.0.1'
+    compile project(path: ':lib_base')
+//    compile 'com.github.supertaohaili:lib_base:1.0.1'
     //    compile 'com.github.supertaohaili:lib_base:1.0.0'
 }
