@@ -96,7 +96,7 @@ public abstract class StateViewPagerLazyFragment extends ViewPagerLazyFragment i
         }
     }
 
-    private boolean isDefaultLoad() {
+    protected boolean isDefaultLoad() {
         return true;
     }
 

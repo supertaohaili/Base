@@ -34,7 +34,7 @@ public abstract class StateActivity extends BaseActivity implements State {
         }
     }
 
-    private Object getStateContent() {
+    protected Object getStateContent() {
         return this;
     }
 
@@ -99,7 +99,7 @@ public abstract class StateActivity extends BaseActivity implements State {
         }
     }
 
-    private boolean isDefaultLoad() {
+    protected boolean isDefaultLoad() {
         return true;
     }
 
