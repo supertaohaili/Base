@@ -32,5 +32,7 @@ dependencies {
     compile rootProject.ext.dependencies["glide"]
     compile rootProject.ext.dependencies["design"]
     compile rootProject.ext.dependencies["cardview-v7"]
-    compile project(path: ':lib_base')
+
+    compile 'com.github.supertaohaili:Base:1.0.5'
+//    compile project(path: ':lib_base')
 }
