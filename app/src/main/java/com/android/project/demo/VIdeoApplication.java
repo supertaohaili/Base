@@ -1,6 +1,5 @@
 package com.android.project.demo;
 
-import android.support.multidex.MultiDex;
 
 import www.thl.com.base.BaseApplication;
 import com.tencent.bugly.Bugly;
@@ -17,7 +16,6 @@ public class VIdeoApplication extends BaseApplication {
 
     @Override
     protected void initConfig() throws Exception {
-        MultiDex.install(this);
         Utils.init(this);
     }
 
