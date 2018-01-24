@@ -81,4 +81,15 @@ public class SuperAdapter extends RecyclerView.Adapter<SuperViewHolder> {
         this.items = list;
         notifyDataSetChanged();
     }
+
+    public void addData(List<LayoutWrapper> data) {
+        this.items.addAll(data);
+        notifyDataSetChanged();
+    }
+
+    public void addNewData(List<LayoutWrapper> data) {
+        this.items.clear();
+        this.items.addAll(data);
+        notifyDataSetChanged();
+    }
 }

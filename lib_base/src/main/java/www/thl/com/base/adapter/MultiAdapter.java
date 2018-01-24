@@ -81,6 +81,17 @@ public abstract class MultiAdapter<T> extends RecyclerView.Adapter<SuperViewHold
         notifyDataSetChanged();
     }
 
+    public void addData(List<T> data) {
+        this.items.addAll(data);
+        notifyDataSetChanged();
+    }
+
+    public void addNewData(List<T> data) {
+        this.items.clear();
+        this.items.addAll(data);
+        notifyDataSetChanged();
+    }
+
     /*获取每个Item的ViewType*/
     public abstract int bindLayout(T item, int position);
 
