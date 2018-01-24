@@ -13,6 +13,7 @@ public abstract class ListViewPagerlazyFragment extends StateViewPagerLazyFragme
 
     private TwinklingRefreshLayout refreshLayout;
     private RecyclerView mRecyclerView;
+    private RecyclerView.Adapter adapter;
 
     @Override
     protected String getSimpleName() {
@@ -40,8 +41,14 @@ public abstract class ListViewPagerlazyFragment extends StateViewPagerLazyFragme
         });
         initTwinklingRefreshLayout(refreshLayout);
         initRecyclerView(mRecyclerView);
-        mRecyclerView.setLayoutManager(getLayoutManager());
-        mRecyclerView.setAdapter(getAdapter());
+        RecyclerView.LayoutManager layoutManager = getLayoutManager();
+        if (layoutManager != null) {
+            mRecyclerView.setLayoutManager(layoutManager);
+        }
+        adapter = initAdapter();
+        if (adapter != null) {
+            mRecyclerView.setAdapter(adapter);
+        }
     }
 
     protected void initRecyclerView(RecyclerView mRecyclerView) {
@@ -52,7 +59,9 @@ public abstract class ListViewPagerlazyFragment extends StateViewPagerLazyFragme
 
     }
 
-
+    public RecyclerView.Adapter getAdapter() {
+        return adapter;
+    }
 
     @Override
     protected Object getStateContent() {
@@ -66,13 +75,14 @@ public abstract class ListViewPagerlazyFragment extends StateViewPagerLazyFragme
 
     protected abstract RecyclerView.LayoutManager getLayoutManager();
 
-    protected abstract RecyclerView.Adapter getAdapter();
+    protected abstract RecyclerView.Adapter initAdapter();
 
-    protected  void loadMore(TwinklingRefreshLayout refreshLayout){
+    protected void loadMore(TwinklingRefreshLayout refreshLayout) {
         loadNetData();
     }
 
-    protected  void refresh(TwinklingRefreshLayout refreshLayout){}
+    protected void refresh(TwinklingRefreshLayout refreshLayout) {
+    }
 
     protected void finishRefreshing() {
         if (refreshLayout != null) {

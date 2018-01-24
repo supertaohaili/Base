@@ -13,6 +13,7 @@ public abstract class ListBaseLazyFragment extends StateBaseLazyFragment {
 
     private TwinklingRefreshLayout refreshLayout;
     private RecyclerView mRecyclerView;
+    private RecyclerView.Adapter adapter;
 
     @Override
     protected String getSimpleName() {
@@ -40,8 +41,14 @@ public abstract class ListBaseLazyFragment extends StateBaseLazyFragment {
         });
         initTwinklingRefreshLayout(refreshLayout);
         initRecyclerView(mRecyclerView);
-        mRecyclerView.setLayoutManager(getLayoutManager());
-        mRecyclerView.setAdapter(getAdapter());
+        RecyclerView.LayoutManager layoutManager = getLayoutManager();
+        if (layoutManager != null) {
+            mRecyclerView.setLayoutManager(layoutManager);
+        }
+        adapter = initAdapter();
+        if (adapter != null) {
+            mRecyclerView.setAdapter(adapter);
+        }
     }
 
     protected void initRecyclerView(RecyclerView mRecyclerView) {
@@ -50,6 +57,10 @@ public abstract class ListBaseLazyFragment extends StateBaseLazyFragment {
 
     protected void initTwinklingRefreshLayout(TwinklingRefreshLayout refreshLayout) {
 
+    }
+
+    public RecyclerView.Adapter getAdapter() {
+        return adapter;
     }
 
     @Override
@@ -64,7 +75,7 @@ public abstract class ListBaseLazyFragment extends StateBaseLazyFragment {
 
     protected abstract RecyclerView.LayoutManager getLayoutManager();
 
-    protected abstract RecyclerView.Adapter getAdapter();
+    protected abstract RecyclerView.Adapter initAdapter();
 
     protected  void loadMore(TwinklingRefreshLayout refreshLayout){
         loadNetData();

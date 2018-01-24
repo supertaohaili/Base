@@ -46,8 +46,19 @@ public abstract class SingleAdapter<T> extends RecyclerView.Adapter<SuperViewHol
         return context;
     }
 
-    public void setData(List<T> list) {
-        this.items = list;
+    public void setData(List<T> data) {
+        this.items = data;
+        notifyDataSetChanged();
+    }
+
+    public void addData(List<T> data) {
+        this.items.addAll(data);
+        notifyDataSetChanged();
+    }
+
+    public void addNewData(List<T> data) {
+        this.items.clear();
+        this.items.addAll(data);
         notifyDataSetChanged();
     }
 
