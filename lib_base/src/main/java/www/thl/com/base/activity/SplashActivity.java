@@ -18,7 +18,6 @@ public abstract class SplashActivity extends BaseActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        setTheme(R.style.SplashTheme);
         super.onCreate(savedInstanceState);
     }
 

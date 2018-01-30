@@ -33,6 +33,6 @@ dependencies {
     compile rootProject.ext.dependencies["design"]
     compile rootProject.ext.dependencies["cardview-v7"]
 
-    compile 'com.github.supertaohaili:Base:1.0.5'
-//    compile project(path: ':lib_base')
+//    compile 'com.github.supertaohaili:Base:1.0.9'
+    compile project(path: ':lib_base')
 }

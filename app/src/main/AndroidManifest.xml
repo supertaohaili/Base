@@ -55,7 +55,6 @@
             android:name="com.android.project.demo.MainActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:theme="@style/SplashTheme"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -63,10 +62,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ui.activity.PlayActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="portrait" />
         <activity
             android:name="com.android.project.demo.ui.activity.GestureLoginActivity"
             android:configChanges="orientation|keyboardHidden"
