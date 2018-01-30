@@ -38,7 +38,7 @@ allprojects {
 }
 
 dependencies {
-       compile 'com.github.supertaohaili:Base:1.0.0'
+       compile 'com.github.supertaohaili:Base:1.0.11'
 }
 ```
 
