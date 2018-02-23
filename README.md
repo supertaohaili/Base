@@ -24,7 +24,7 @@ github:https://github.com/fishyer/StudyRecyclerView
 
 12、数据库：使用litepal ，轻量，简单：https://github.com/LitePalFramework/LitePal
 
-难受，难受难受，上传的aar包不能包含有aar包，因为这个问题，导致我创建了几个版本都不能成功导入，aar包只能引用aar，不能包含aar，目前稳定版是1.0.3
+难受，难受难受，上传的aar包不能包含有aar包，因为这个问题，导致我创建了几个版本都不能成功导入，aar包只能引用aar，不能包含aar，目前稳定版是1.0.11
 ```
 
 
